@@ -26,7 +26,7 @@ namespace Deliverable2Iterative
                     counter++;
 
                     //Pauses program for .5 seconds, so the user isn't bombarded with line entries
-                    System.Threading.Thread.Sleep(1000);
+                    System.Threading.Thread.Sleep(500);
 
                 }//End while loop
             }//End try
