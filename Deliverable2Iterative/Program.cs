@@ -1,8 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+    Author: Matthew Bredahl
+    Date: 01/20/2019
+    Comments: This C# Console application code demonstrates the use of
+              iterative statements after getting input from users. 
+*/
+using System;
 
 namespace Deliverable2Iterative
 {
@@ -10,6 +12,27 @@ namespace Deliverable2Iterative
     {
         static void Main(string[] args)
         {
-        }
-    }
-}
+            Console.Write("Please enter an integer value between 1 and 100: ");
+
+            string input = Console.ReadLine();
+
+            try
+            {
+                int num = int.Parse(input);
+                int counter = 1;
+                while (num != (counter - 1))
+                {
+                    Console.WriteLine("You have entered " + num + ". This is the current integer value in the loop: " + counter);
+                    counter++;
+
+                    //Pauses program for .5 seconds, so the user isn't bombarded with line entries
+                    System.Threading.Thread.Sleep(1000);
+
+                }//End while loop
+            }//End try
+            catch
+            {
+            }//End catch
+        }//End Main method
+    }//End Program class
+}//End namespace
