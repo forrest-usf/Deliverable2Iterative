@@ -29,9 +29,18 @@ namespace Deliverable2Iterative
                     System.Threading.Thread.Sleep(500);
 
                 }//End while loop
+                
+                //Prompts for user to close program manually    
+                Console.WriteLine("Press any key to continue . . . ");
+                Console.ReadKey(true);
+
             }//End try
             catch
             {
+                Console.WriteLine("An error has occured");
+                //Prompts for user to close program manually
+                Console.WriteLine("Press any key to continue . . . ");
+                Console.ReadKey(true);
             }//End catch
         }//End Main method
     }//End Program class
