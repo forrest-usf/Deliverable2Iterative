@@ -19,7 +19,7 @@ namespace Deliverable2Iterative
             try
             {
                 int num = int.Parse(input);
-                if (num > 0 && num < 100)
+                if (num > 0 && num <= 100)
                 {
                     int counter = 1;
                     while (num != (counter - 1))
@@ -27,7 +27,7 @@ namespace Deliverable2Iterative
                         Console.WriteLine("You have entered " + num + ". This is the current integer value in the loop: " + counter);
                         counter++;
 
-                        //Pauses program for .5 seconds, so the user isn't bombarded with line entries
+                        //Pauses program for .5 seconds, so the user isn't bombarded with line entries all at once
                         System.Threading.Thread.Sleep(500);
 
                     }//End while loop
@@ -46,6 +46,7 @@ namespace Deliverable2Iterative
             }//End try
             catch
             {
+                //Displays ambigous statement in case of any possible errors that could occur
                 Console.WriteLine("An error has occured");
                 //Prompts for user to close program manually
                 Console.WriteLine("Press any key to continue . . . ");
