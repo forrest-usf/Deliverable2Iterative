@@ -19,20 +19,29 @@ namespace Deliverable2Iterative
             try
             {
                 int num = int.Parse(input);
-                int counter = 1;
-                while (num != (counter - 1))
+                if (num > 0 && num < 100)
                 {
-                    Console.WriteLine("You have entered " + num + ". This is the current integer value in the loop: " + counter);
-                    counter++;
+                    int counter = 1;
+                    while (num != (counter - 1))
+                    {
+                        Console.WriteLine("You have entered " + num + ". This is the current integer value in the loop: " + counter);
+                        counter++;
 
-                    //Pauses program for .5 seconds, so the user isn't bombarded with line entries
-                    System.Threading.Thread.Sleep(500);
+                        //Pauses program for .5 seconds, so the user isn't bombarded with line entries
+                        System.Threading.Thread.Sleep(500);
 
-                }//End while loop
-                
-                //Prompts for user to close program manually    
-                Console.WriteLine("Press any key to continue . . . ");
-                Console.ReadKey(true);
+                    }//End while loop
+
+                    //Prompts for user to close program manually    
+                    Console.WriteLine("Press any key to continue . . . ");
+                    Console.ReadKey(true);
+                }//End if statement
+                else
+                {
+                    Console.WriteLine("Verify your input and try again");
+                    Console.WriteLine("Press any key to continue . . . ");
+                    Console.ReadKey(true);
+                }
 
             }//End try
             catch
@@ -41,7 +50,7 @@ namespace Deliverable2Iterative
                 //Prompts for user to close program manually
                 Console.WriteLine("Press any key to continue . . . ");
                 Console.ReadKey(true);
-            }//End catch
+        }//End catch
         }//End Main method
     }//End Program class
 }//End namespace
